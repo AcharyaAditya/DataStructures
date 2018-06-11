@@ -23,6 +23,8 @@ public class DataStructures {
         System.out.println(myQueue.isEmpty());
         
         MyDoublyLinkedList mydll = new MyDoublyLinkedList();     
+        
+        SinglyLinkedList mysll = new SinglyLinkedList();
     }
     
 }
