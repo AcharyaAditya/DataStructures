@@ -21,6 +21,8 @@ public class DataStructures {
     
         MyQueue <Integer> myQueue = new MyQueue();
         System.out.println(myQueue.isEmpty());
+        
+        MyDoublyLinkedList mydll = new MyDoublyLinkedList();     
     }
     
 }
