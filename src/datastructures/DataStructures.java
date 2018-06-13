@@ -25,6 +25,31 @@ public class DataStructures {
         MyDoublyLinkedList mydll = new MyDoublyLinkedList();     
         
         SinglyLinkedList mysll = new SinglyLinkedList();
+
+        MyBinaryTreeTraversal btree = new MyBinaryTreeTraversal();
+        btree.add(100);
+        btree.add(50);
+        btree.add(200);
+        btree.add(25);
+        btree.add(75);
+        btree.add(150);
+        btree.add(250);
+        btree.add(20);
+        btree.add(45);
+        btree.add(60);
+        btree.add(90);
+        btree.add(125);
+        btree.add(175);
+        btree.add(210);
+        btree.add(300);
+        btree.preorder();
+        System.out.println();
+        btree.inorder();
+        System.out.println();
+        btree.postorder();
+        System.out.println();
+        System.out.println("height: " + btree.height());
+        System.out.println("total nodes: "+btree.totalnodes());
     }
-    
+
 }
