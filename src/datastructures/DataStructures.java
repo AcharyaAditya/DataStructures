@@ -16,16 +16,40 @@ public class DataStructures {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        MyStack <Integer> myStack =  new MyStack();
-        System.out.println(myStack.isEmpty());
-    
-        MyQueue <Integer> myQueue = new MyQueue();
-        System.out.println(myQueue.isEmpty());
-        
-        MyDoublyLinkedList mydll = new MyDoublyLinkedList();     
-        
-        SinglyLinkedList mysll = new SinglyLinkedList();
+//        singleLLCall();
+        queueUsingStack();
+    }
 
+    public static void stackCall() {
+        MyStack<Integer> myStack = new MyStack();
+        System.out.println(myStack.isEmpty());
+    }
+
+    public static void queueCall() {
+        MyQueue<Integer> myQueue = new MyQueue();
+        System.out.println(myQueue.isEmpty());
+    }
+
+    public static void singleLLCall() {
+        SinglyLinkedList mysll = new SinglyLinkedList();
+        mysll.append(10);
+        mysll.append(11);
+        mysll.append(12);
+        mysll.append(10);
+        mysll.append(12);
+        mysll.append(10);
+//        System.out.println(mysll.getntolast(5));
+        mysll.getAll();
+        mysll.nobufferDupliDelete();
+        System.out.println("After");
+        mysll.getAll();
+    }
+
+    public static void doublyLLCall() {
+        MyDoublyLinkedList mydll = new MyDoublyLinkedList();
+    }
+
+    public static void binaryTreeCall() {
         MyBinaryTreeTraversal btree = new MyBinaryTreeTraversal();
         btree.add(100);
         btree.add(50);
@@ -49,7 +73,18 @@ public class DataStructures {
         btree.postorder();
         System.out.println();
         System.out.println("height: " + btree.height());
-        System.out.println("total nodes: "+btree.totalnodes());
+        System.out.println("total nodes: " + btree.totalnodes());
     }
-
+    
+    public static void queueUsingStack(){
+        QueueUisng2Stacks queuestack = new QueueUisng2Stacks();
+        queuestack.push(10);
+        queuestack.push(11);
+        queuestack.push(12);
+        queuestack.push(13);
+        queuestack.push(14);
+        queuestack.push(15);
+        System.out.println(queuestack.pop());
+        System.out.println(queuestack.peek());
+    }
 }

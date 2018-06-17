@@ -5,6 +5,8 @@
  */
 package datastructures;
 
+import java.util.Hashtable;
+
 /**
  *
  * @author Aditya
@@ -89,9 +91,67 @@ public class SinglyLinkedList<E> {
         return size;
     }
 
+    public E getntolast(int n) {
+        Node<E> currentNode = head;
+        int total = 1;
+        while (currentNode.next != null) {
+            total++;
+            currentNode = currentNode.next;
+        }
+        currentNode = head;
+        int myIndex = total - n;
+        while (myIndex != 0) {
+            currentNode = currentNode.next;
+            myIndex--;
+        }
+        return currentNode.data;
+    }
+
     public void nullExceptions(E value) {
         if (value == null) {
             throw new NullPointerException();
         }
+    }
+
+    public void deleteDuplicate() {
+        Hashtable elements = new Hashtable();
+        nullExceptions(head.next.data);
+        Node<E> prevNode = head;
+        Node<E> currentNode = head.next;
+        while (currentNode != null) {
+            if (elements.containsKey(currentNode.data)) {
+                prevNode.next = currentNode.next;
+                size--;
+            } else {
+                elements.put(currentNode.data, true);
+                prevNode = currentNode;
+            }
+
+            currentNode = currentNode.next;
+        }
+    }
+
+    public void nobufferDupliDelete() {
+        Node<E> current = head.next;
+        Node<E> previous = head;
+        Node<E> runner = null;
+        while (current != null) {
+            runner = head.next;
+            while (runner != current) {
+                if (runner.data == current.data) {
+                    previous.next = current.next;
+                    current = current.next;
+                    break;
+                } else {
+//                    previous = runner;
+                }
+                runner = runner.next;
+            }
+            if (runner == current) {
+                previous = current;
+                current = current.next;
+            }
+        }
+
     }
 }
