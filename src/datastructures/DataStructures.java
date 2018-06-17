@@ -17,7 +17,8 @@ public class DataStructures {
     public static void main(String[] args) {
         // TODO code application logic here
 //        singleLLCall();
-        queueUsingStack();
+//        queueUsingStack();
+        sortStack();
     }
 
     public static void stackCall() {
@@ -75,8 +76,8 @@ public class DataStructures {
         System.out.println("height: " + btree.height());
         System.out.println("total nodes: " + btree.totalnodes());
     }
-    
-    public static void queueUsingStack(){
+
+    public static void queueUsingStack() {
         QueueUisng2Stacks queuestack = new QueueUisng2Stacks();
         queuestack.push(10);
         queuestack.push(11);
@@ -86,5 +87,22 @@ public class DataStructures {
         queuestack.push(15);
         System.out.println(queuestack.pop());
         System.out.println(queuestack.peek());
+    }
+
+    public static void sortStack() {
+        MyStack meroStack = new MyStack();
+        MyStack sortedStack = new MyStack();
+        SortingStack meroSorted = new SortingStack();
+        meroStack.push(10);
+        meroStack.push(5);
+        meroStack.push(20);
+        meroStack.push(17);
+        meroStack.push(1);
+
+        sortedStack = meroSorted.sort(meroStack);
+        for (int i = 0; i < 5; i++) {
+            System.out.println(sortedStack.pop());
+        }
+
     }
 }
