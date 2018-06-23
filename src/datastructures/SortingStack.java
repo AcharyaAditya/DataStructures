@@ -5,6 +5,8 @@
  */
 package datastructures;
 
+import datastructures.MyStack;
+
 /**
  *
  * @author Aditya

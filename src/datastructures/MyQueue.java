@@ -14,10 +14,12 @@ public class MyQueue<E> {
 
     Node<E> head;
     Node<E> tail;
+    int size;
 
     MyQueue() {
         head = null;
         tail = null;
+        size = 0;
     }
 
     class Node<E> {
@@ -47,6 +49,7 @@ public class MyQueue<E> {
             tail.next = myNode;
             tail = myNode;
         }
+        size++;
         return true;
     }
     
@@ -57,6 +60,7 @@ public class MyQueue<E> {
         }
         deqVal = head.data;
         head = head.next;
+        size--;
         return deqVal;
     }
 
@@ -65,5 +69,15 @@ public class MyQueue<E> {
             throw new IndexOutOfBoundsException();
         }
         return head.data;
+    }
+    
+    public int getSize(){
+        return size;
+    }
+    
+    public void clear(){
+        head = null;
+        tail = null;
+        size = 0;
     }
 }

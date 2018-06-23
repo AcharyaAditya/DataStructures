@@ -5,6 +5,10 @@
  */
 package datastructures;
 
+import Sort.MergeSort;
+import Sort.Sorting;
+import java.util.Hashtable;
+
 /**
  *
  * @author Aditya
@@ -18,7 +22,30 @@ public class DataStructures {
         // TODO code application logic here
 //        singleLLCall();
 //        queueUsingStack();
-        sortStack();
+//        sortStack();
+//        MapNumbersUsingQueue here = new MapNumbersUsingQueue(79);
+//        here.combine();
+//        SubArraySums sarray = new SubArraySums();
+//        sarray.sub();
+//        randomQuestions rq = new randomQuestions();
+//        rq.numberReading();
+//        MinHeapImplementation minHeap = new MinHeapImplementation();
+//        minHeap.add(11);
+//        minHeap.add(10);
+//        minHeap.add(9);
+//        minHeap.add(4);
+//        minHeap.add(27);
+//        minHeap.add(6);
+//        minHeap.add(28);
+//        System.out.println(minHeap.peek());
+//        minHeap.findMaxElement();
+//        Sorting sortArr = new Sorting();
+//        sortArr.selection();
+        int [] a = new int[]{99, 89, 1, 100, 50, 49, 200, 187, 3, 6};
+//        sortArr.selectionRecursion(a);
+//        sortArr.insertionSort();
+        MergeSort mergesort = new MergeSort();
+        mergesort.sort(a);
     }
 
     public static void stackCall() {
