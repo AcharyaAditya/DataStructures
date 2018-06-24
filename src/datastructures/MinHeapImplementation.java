@@ -102,6 +102,8 @@ public class MinHeapImplementation {
              }
              if(items[currentIndex] > items[smallerIndex]){
                  swap(currentIndex, smallerIndex);
+             }else{
+                 break;
              }
              currentIndex = smallerIndex;
          }

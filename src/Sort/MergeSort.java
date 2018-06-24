@@ -57,8 +57,8 @@ public class MergeSort {
             temp[index++] = a[right++];
         }
 
-        for (int i = 0; i < size; i++, rightEnd-- ) {
-            a[rightEnd] = temp[rightEnd];
+        for (int i = 0; i < size; i++, leftStart++ ) {
+            a[leftStart] = temp[leftStart];
         }
     }
 

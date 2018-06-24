@@ -107,6 +107,8 @@ public class MaxHeapImplementation {
             }
             if(items[currIndx] < items[maxChildIndex]){
                 swap(currIndx, maxChildIndex);
+            }else{
+                break;
             }
             currIndx = maxChildIndex;
         }
