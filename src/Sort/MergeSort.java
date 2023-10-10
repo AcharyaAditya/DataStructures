@@ -7,7 +7,7 @@ package Sort;
 
 /**
  *
- * @author Aditya
+ * @author Aditya Acharya
  */
 public class MergeSort {
 
